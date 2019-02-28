@@ -24,5 +24,3 @@ choose n k = n * (choose (n-1) (k-1)) `div` k
 --task 7
 perfects :: [Integer]
 perfects = [ x | x <- [2..], sum [ d | d <- [1..(x - 1)], x `mod` d == 0] == x]
-
-f a b = b

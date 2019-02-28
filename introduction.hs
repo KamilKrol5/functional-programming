@@ -38,3 +38,17 @@ comprehension3 = [ x | x <- [10..20], x /= 13, x /= 15, x /= 19]
 comprehension4 = [ x*y | x <- [2,5,10], y <- [8,10,11]]  
 
 length' xs = sum [1 | _ <- xs] 
+
+-- A tuple can contain a combination of several types.
+resultantVector (a,b) (c,d) = (a+c,b+d)
+firstElementOFTuple = fst (4,6)
+secondElementOfPair = snd (34,67) -- These functions operate only on pairs. They won't work on triples, 4-tuples, 5-tuples, etc.
+
+zipping1 = zip [1 .. 5] ["one", "two", "three", "four", "five"] 
+zipping2 = zip [1..] ["apple", "orange", "cherry", "mango"]  
+zipping3 = zip [1 .. 4] ["a","b"]
+
+rightTriangles = [ (a,b,c) | c <- [1..10], b <- [1..c], a <- [1..b], a^2 + b^2 == c^2]  
+
+ceilingOfSqrtOfIntegral :: (Integral a) => a -> a
+ceilingOfSqrtOfIntegral n = ceiling (sqrt (fromIntegral n))
