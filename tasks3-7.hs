@@ -2,6 +2,7 @@
 euler n = length [k | k <- [1..n], gcd k n == 1]
 myFilter k n = gcd k n == 1
 euler2 n = (length . filter (myFilter n)) [1..n]
+-- euler2 n = length . filter (myFilter n) $ [1..n]
 sumUsingeuler :: Int -> Int
 sumUsingeuler n = sum [euler k | k <- [1..n], n `mod` k == 0]
 -- task 4
