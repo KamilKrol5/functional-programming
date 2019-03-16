@@ -52,6 +52,7 @@ rightTriangles = [ (a,b,c) | c <- [1..10], b <- [1..c], a <- [1..b], a^2 + b^2 =
 
 ceilingOfSqrtOfIntegral :: (Integral a) => a -> a
 ceilingOfSqrtOfIntegral n = ceiling (sqrt (fromIntegral n))
+ceilingOfSqrtOfIntegral2 n = ceiling $ sqrt $ fromIntegral n
 
 wordCount input = show (length (words input))
 charactersCount input = show (length  input)
