@@ -32,8 +32,8 @@ partitions [] = []
 partitions xs = [ (x,y) | x <- subs, y <- subs, x ++ y == xs]
     where subs = subsets xs
 -- task 27
-nub (x:xs) = map head (group xs)
-nub2 (x:xs) = (map head . group) xs 
+nub (x:xs) = map head (group xs) -- not working for repetitive values
+nub2 (x:xs) = (map head . group) xs -- not working for repetitive values
 nub3 [] = []
 nub3 (x:xs) = [t | t <- x:xs, not (t `elem` xs) ] ++ nub3 xs
 -- task 28
